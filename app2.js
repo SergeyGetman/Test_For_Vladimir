@@ -25,11 +25,16 @@ console.log(totalSum(arr))
 
 
 //ф-ция должна возвращать true, если элемент elem присутствует в массиве, иначе false
-let arr2 = [1, 2, 3, 4, false];
+let arr2 = [1, 2, 3, 4,, "234", 8, false];
 
 function includ(array, elem) {
+    let res = [];
 
-    return array.some(element => elem === element);
+    for(let elem of array){
+        if(typeof elem === 'number') res.push(elem);
+    }
+    return res;
+    
 }
 
 console.log(includ(arr2, true));
@@ -41,8 +46,11 @@ let arr3 = [1, "23", 3, 4, 5]
 let arr4 = [1, "44", 3, 4, 5]
 
 function conArrays(array1, array2) {
-
-    return array1.concat(array2);
+            let res = [];
+        for(let i = 0; i < array1.length; i++){
+            res.push(array1[i],array2[i]); 
+        }
+    return res
 }
 console.log(conArrays(arr3, arr4));
 
@@ -59,10 +67,16 @@ console.log(conArrays(arr3, arr4));
 
      function comboArrays (array1, array2) {
         let res = [];
-        for(let i = 0; i <= array1.length; i++){
-            res.push(array1[i] + " " + array2[i])
-        }
-        return [res.join(" ").replace(/undefined/g, "")]
+  
+            for(let i = 0; i <= array2.length - 1; i++){
+                res.push(array1[i], array2[i])
+            
+            }
+        return res.filter((elem) => elem !== undefined)
     }
 
     console.log(comboArrays(arr5, arr6));
+
+
+
+
