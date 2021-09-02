@@ -1,0 +1,20 @@
+
+
+.button-one{
+    background-color: chartreuse;
+    color: rgb(15, 15, 15);
+    font-weight: 900;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+.new-users{
+    background-color: violet;
+    margin: 20px;
+    font-size: 35px;
+}
+
+.table{
+    border: 1px solid rgb(2, 1, 1)
+}
+
